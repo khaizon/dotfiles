@@ -1,4 +1,4 @@
-export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/homebrew/bin:$PATH
 
 export PATH="$HOME/.docker/bin:$PATH"
 export PATH="$HOME/Apps/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
