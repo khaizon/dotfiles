@@ -11,9 +11,9 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 16
-config.color_scheme = 'Kanagawa Dragon'
-config.font = wezterm.font 'Terminess Nerd Font Mono'
+config.font_size = 14
+config.color_scheme = 'Kanagawa (Gogh)'
+config.font = wezterm.font 'Maple Mono NF CN'
 
 -- remove tabs and title
 config.enable_tab_bar = false
