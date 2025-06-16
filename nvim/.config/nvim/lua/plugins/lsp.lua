@@ -193,16 +193,6 @@ return {
 			},
 		})
 
-		-- LSP servers and clients are able to communicate to each other what features they support.
-		--  By default, Neovim doesn't support everything that is in the LSP specification.
-		--  When you add blink.cmp, luasnip, etc. Neovim now has *more* capabilities.
-		--  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
-		-- NOTE: The following line is now commented as blink.cmp extends capabilites by default from its internal code:
-		-- https://github.com/Saghen/blink.cmp/blob/102db2f5996a46818661845cf283484870b60450/plugin/blink-cmp.lua
-		-- It has been left here as a comment for educational purposes (as the predecessor completion plugin required this explicit step).
-		--
-		-- local capabilities = require("blink.cmp").get_lsp_capabilities()
-
 		-- Language servers can broadly be installed in the following ways:
 		--  1) via the mason package manager; or
 		--  2) via your system's package manager; or
