@@ -60,9 +60,6 @@ return {
 
 				local fzf = require("fzf-lua")
 
-				map("<leader>f", function()
-					vim.lsp.buf.format({ async = true })
-				end, "format code")
 				-- Rename the variable under your cursor.
 				--  Most Language Servers support renaming across files, etc.
 				map("<leader>cn", vim.lsp.buf.rename, "[R]e[n]ame")
@@ -286,6 +283,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers.mason or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"jdtls",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
