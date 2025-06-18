@@ -191,6 +191,14 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
+    ctrl-shift-semicolon = 'mode service'
+
+    # app opening shortcuts
+    ctrl-shift-t = 'exec-and-forget open -a WezTerm'
+    ctrl-shift-b = 'exec-and-forget open -a Zen'
+    ctrl-shift-g = 'exec-and-forget open -a ChatGPT'
+    ctrl-shift-n = 'exec-and-forget open -a Notes'
+    ctrl-shift-f = 'exec-and-forget open -a Finder'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -212,24 +220,44 @@ automatically-unhide-macos-hidden-apps = false
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
+# T for Terminal
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-# T for Terminal
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Microsoft Teams'
-# C for CHAT
-run = "move-node-to-workspace C"
-
+if.app-id = 'com.googlecode.iterm2'
+run = "move-node-to-workspace T"
 [[on-window-detected]]
-if.app-name-regex-substring = 'Microsoft Teams'
-# C for CHAT
-run = "move-node-to-workspace C"
+if.app-id = 'com.apple.Terminal'
+run = "move-node-to-workspace T"
 
+# M for all Microsoft stuffs
 [[on-window-detected]]
-if.app-name-regex-substring = 'Microsoft Teams'
-# C for CHAT
+if.app-name-regex-substring = 'Microsoft'
+run = "move-node-to-workspace M"
+
+# I for IDE (VS Code) or intellij
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij'
+run = "move-node-to-workspace I"
+[[on-window-detected]]
+if.app-name-regex-substring = 'Code'
+run = "move-node-to-workspace I"
+
+# C for chat 
+[[on-window-detected]]
+if.app-name-regex-substring = 'ChatGPT'
 run = "move-node-to-workspace C"
 
+# VPN stuffs
+[[on-window-detected]]
+if.app-name-regex-substring = 'AnyConnect'
+run = "move-node-to-workspace V"
+[[on-window-detected]]
+if.app-name-regex-substring = 'Passepartout'
+run = "move-node-to-workspace V"
+[[on-window-detected]]
+if.app-name-regex-substring = 'Cisco'
+run = "move-node-to-workspace V"
 
