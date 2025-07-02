@@ -35,6 +35,7 @@ vim.o.softtabstop = 4
 vim.o.smarttab = true
 vim.o.smartindent = true
 vim.o.autoindent = true
+vim.o.colorcolumn = "80"
 
 -- Save undo history
 vim.o.undofile = true
